@@ -1,0 +1,29 @@
+services:
+  - type: web
+    name: nexoventas-api
+    runtime: docker
+    plan: free
+    region: oregon
+    healthCheckPath: /actuator/health
+    envVars:
+      - key: DB_URL
+        fromDatabase:
+          name: nexoventas-db
+          property: connectionString
+      - key: DB_USERNAME
+        fromDatabase:
+          name: nexoventas-db
+          property: user
+      - key: DB_PASSWORD
+        fromDatabase:
+          name: nexoventas-db
+          property: password
+      - key: JWT_SECRET
+        generateValue: true
+
+databases:
+  - name: nexoventas-db
+    databaseName: nexoventas
+    user: nexoventas
+    plan: free
+    region: oregon
