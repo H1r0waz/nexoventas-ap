@@ -50,7 +50,7 @@ La documentación quedará en `https://TU-URL/swagger-ui.html`. Render inyecta l
 { "username": "admin", "password": "admin123" }
 ```
 
-Usa el `accessToken` devuelto como `Authorization: Bearer <token>`. Estas credenciales son exclusivamente de demostración: antes de desplegar, se deben reemplazar por usuarios almacenados en la base de datos y secretos configurados en variables de entorno.
+Usa el `accessToken` devuelto como `Authorization: Bearer <token>`. Estas credenciales son exclusivamente de demostración. En producción configura `APP_ADMIN_USERNAME` y `APP_ADMIN_PASSWORD` como variables de entorno; no uses las credenciales de ejemplo.
 
 ## Endpoints principales
 

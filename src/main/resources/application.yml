@@ -15,6 +15,9 @@ spring:
 app:
   jwt:
     secret: ${JWT_SECRET:change-this-development-secret-to-at-least-32-characters}
+  admin:
+    username: ${APP_ADMIN_USERNAME:admin}
+    password: ${APP_ADMIN_PASSWORD:admin123}
 springdoc:
   swagger-ui:
     path: /swagger-ui.html
